@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Screens/homeScreen.dart';
 import 'Screens/loginScreen.dart';
+import 'Screens/registerScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,11 +17,13 @@ Widget build(BuildContext context) {
     darkTheme: ThemeData(
       brightness: Brightness.dark,
     ),
+    debugShowCheckedModeBanner: false,
     // initialRoute: "/home",
     routes: {
       "/": (context) => LoginScreen(),
       "/home": (context) => HomeScreen(),
          "/login": (context) => LoginScreen(),
+           "/register": (context) => RegisterScreen(),
     },
   ); //materialApp
 }

@@ -16,42 +16,41 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  Future<void> save() async {
-    try {
-      var res = await http.post(
-        Uri.parse("http://localhost:8080/signin"),
-        headers: <String, String>{
-          'Content-Type': 'application/json; charset=UTF-8',
-        },
-        body: jsonEncode({
-          'email': user.email,
-          'password': user.password,
-        }),
-      );
+Future<void> save() async {
+  try {
+    var res = await http.post(
+      Uri.parse("http://localhost:8080/signin"),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode({'email': user.email, 'password': user.password}),
+    );
 
-      if (res.statusCode == 200) {
-        // Successful registration, navigate to login screen
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
-        );
-      } else {
-        // Handle registration failure, show an error message
-        print("Registration failed with status code: ${res.statusCode}");
-        print(res.body);
-        // You can display a snackbar or an AlertDialog to inform the user about the error
-      }
-    } catch (error) {
-      print("Error during signup: $error");
-      // Handle error (e.g., show an error message to the user)
-    }
+if (res.statusCode == 200) {
+  var jsonResponse = json.decode(res.body);
+
+if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.password) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => HomeScreen()),
+    );
+  } else {
+      print("Login failed. Incorrect user information in the server response.");
   }
+} else {
+  print("Login failed with status code: ${res.statusCode}");
+  print(res.body);
+}
+  } catch (error) {
+    print("Error during Login: $error");
+  }
+}
 
   User user = User('', '');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Stack( 
         children: [
           Positioned(
             top: 0,
@@ -61,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 150,
             ),
           ),
-          Container(
+          Container( 
             alignment: Alignment.center,
             child: Form(
               key: _formKey,
@@ -207,7 +206,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                               context,
                               new MaterialPageRoute(
-                                builder: (context) => HomeScreen(),
+                                builder: (context) => RegisterScreen(),
                               ),
                             );
                           },
