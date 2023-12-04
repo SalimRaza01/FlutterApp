@@ -30,20 +30,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
       );
 
       if (res.statusCode == 200) {
-        // Successful registration, navigate to login screen
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => LoginScreen()),
         );
       } else {
-        // Handle registration failure, show an error message
         print("Registration failed with status code: ${res.statusCode}");
         print(res.body);
-        // You can display a snackbar or an AlertDialog to inform the user about the error
       }
     } catch (error) {
       print("Error during signup: $error");
-      // Handle error (e.g., show an error message to the user)
     }
   }
 
