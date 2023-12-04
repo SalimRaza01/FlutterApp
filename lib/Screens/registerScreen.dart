@@ -1,10 +1,11 @@
+// ignore_for_file: prefer_const_constructors_in_immutables, library_private_types_in_public_api, use_build_context_synchronously, avoid_print, prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
 import 'loginScreen.dart';
 import '../user.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'homeScreen.dart';
 
 class RegisterScreen extends StatefulWidget {
   RegisterScreen({Key? key}) : super(key: key);

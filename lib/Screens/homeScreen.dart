@@ -1,26 +1,30 @@
+// ignore_for_file: file_names, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: const Text("Home"),
       ),
       body: Container(
-        padding: EdgeInsets.only(right: 20, left: 20),
+        padding: const EdgeInsets.only(right: 20, left: 20),
         child: Column(
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Expanded(
+                const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 0),
+                        padding: EdgeInsets.only(left: 0),
                         child: Text(
                           'Welcome,',
                           style: TextStyle(
@@ -29,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 0),
+                        padding: EdgeInsets.only(left: 0),
                         child: Text(
                           'Salim Raza',
                           style: TextStyle(

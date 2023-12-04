@@ -5,10 +5,12 @@ import 'Screens/registerScreen.dart';
 import 'Screens/newLogin.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,11 +22,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: "/home",
       routes: {
+        // ignore: prefer_const_constructors
         "/": (context) => NewLogin(),
+        // ignore: prefer_const_constructors
         "/home": (context) => HomeScreen(),
         "/login": (context) => LoginScreen(),
         "/register": (context) => RegisterScreen(),
-        "/newlogin": (context) => NewLogin(),
+        // "/newlogin": (context) => NewLogin(),
       },
     );
   }

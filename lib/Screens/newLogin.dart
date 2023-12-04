@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class NewLogin extends StatelessWidget {
@@ -79,7 +81,7 @@ class NewLogin extends StatelessWidget {
                                 ),
                                 SizedBox(width: 8),
                                 Image.asset(
-                                  '/Users/ddtech/newproject/assets/images/glogin.png',
+                                  'assets/images/glogin.png',
                                   width: 30,
                                   height: 30,
                                   // fit: BoxFit.cover,
@@ -114,7 +116,7 @@ class NewLogin extends StatelessWidget {
                                 ),
                                 SizedBox(width: 10),
                                 Image.asset(
-                                  '/Users/ddtech/newproject/assets/images/alogin.png',
+                                  'assets/images/alogin.png',
                                   width: 25,
                                   height: 25,
                                   // fit: BoxFit.cover,
