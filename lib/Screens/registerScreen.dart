@@ -48,16 +48,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+                    backgroundColor: Colors.black,
       body: Stack(
         children: [
-          Positioned(
-            top: 0,
-            child: SvgPicture.asset(
-              'assets/images/top.svg',
-              width: 400,
-              height: 150,
-            ),
-          ),
+          // Positioned(
+          //   top: 0,
+          //   child: SvgPicture.asset(
+          //     'assets/images/top.svg',
+          //     width: 400,
+          //     height: 150,
+          //   ),
+          // ),
           Container(
             alignment: Alignment.center,
             child: Form(
@@ -67,14 +68,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 180,
+                    height: 200,
                   ),
                   Text(
-                    "Register",
+                    "Welcome, Register",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 50,
-                      color: Colors.blue,
+                      fontSize: 22,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -84,6 +85,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding: const EdgeInsets.all(20),
                     child: TextFormField(
                       controller: TextEditingController(text: user.email),
+                       style: TextStyle(color: Colors.white),
                       onChanged: (value) {
                         user.email = value;
                       },
@@ -101,16 +103,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       decoration: InputDecoration(
                         icon: Icon(
                           Icons.email,
-                          color: Colors.blue,
+                          color: Colors.white,
                         ),
                         hintText: 'Enter Email',
+                        hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         errorBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
@@ -127,6 +130,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding: const EdgeInsets.all(20),
                     child: TextFormField(
                       controller: TextEditingController(text: user.password),
+                       style: TextStyle(color: Colors.white),
                       onChanged: (value) {
                         user.password = value;
                       },
@@ -139,16 +143,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       decoration: InputDecoration(
                         icon: Icon(
                           Icons.vpn_key,
-                          color: Colors.blue,
+                          color: Colors.white,
                         ),
                         hintText: 'Enter Password',
+                        hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         errorBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
@@ -168,7 +173,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       width: 200,
                       child: TextButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.blue),
+                          backgroundColor: MaterialStateProperty.all(Colors.green),
                           shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100),
@@ -191,13 +196,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(95, 20, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(75, 20, 0, 0),
                     child: Row(
                       children: [
                         Text(
                           "Already have an Account ? ",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -213,7 +218,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           child: Text(
                             "Sign in",
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Colors.green,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

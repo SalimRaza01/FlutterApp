@@ -50,16 +50,17 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Stack( 
         children: [
-          Positioned(
-            top: 0,
-            child: SvgPicture.asset(
-              'assets/images/top.svg',
-              width: 400,
-              height: 150,
-            ),
-          ),
+          // Positioned(
+          //   top: 0,
+          //   child: SvgPicture.asset(
+          //     'assets/images/top.svg',
+          //     width: 400,
+          //     height: 150,
+          //   ),
+          // ),
           Container( 
             alignment: Alignment.center,
             child: Form(
@@ -69,14 +70,14 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 180,
+                    height: 200,
                   ),
                   Text(
-                    "Login",
+                    "Welcome, Login",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 50,
-                      color: Colors.blue,
+                      fontSize: 22,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -86,6 +87,7 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                     padding: const EdgeInsets.all(20),
                     child: TextFormField(
                       controller: TextEditingController(text: user.email),
+                      style: TextStyle(color: Colors.white),
                       onChanged: (value) {
                         user.email = value;
                       },
@@ -103,16 +105,17 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                       decoration: InputDecoration(
                         icon: Icon(
                           Icons.email,
-                          color: Colors.blue,
+                          color: Colors.white,
                         ),
                         hintText: 'Enter Email',
+                        hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         errorBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
@@ -129,6 +132,7 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                     padding: const EdgeInsets.all(20),
                     child: TextFormField(
                       controller: TextEditingController(text: user.password),
+                             style: TextStyle(color: Colors.white),
                       onChanged: (value) {
                         user.password = value;
                       },
@@ -142,16 +146,17 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                       decoration: InputDecoration(
                         icon: Icon(
                           Icons.vpn_key,
-                          color: Colors.blue,
+                          color: Colors.white,
                         ),
                         hintText: 'Enter Password',
+                             hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Colors.blue),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         errorBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(16),
@@ -171,7 +176,7 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                       width: 200,
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor: Colors.green,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(100),
                           ),
@@ -197,7 +202,7 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                         Text(
                           "Not have Account ? ",
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -213,7 +218,7 @@ if (jsonResponse['email'] == user.email && jsonResponse['password'] == user.pass
                           child: Text(
                             "Signup",
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Colors.green,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

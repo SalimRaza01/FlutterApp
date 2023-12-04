@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Screens/homeScreen.dart';
 import 'Screens/loginScreen.dart';
 import 'Screens/registerScreen.dart';
+import 'Screens/newLogin.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,10 +21,11 @@ Widget build(BuildContext context) {
     debugShowCheckedModeBanner: false,
     // initialRoute: "/home",
     routes: {
-      "/": (context) => LoginScreen(),
+     "/": (context) => NewLogin(),
       "/home": (context) => HomeScreen(),
          "/login": (context) => LoginScreen(),
            "/register": (context) => RegisterScreen(),
+             "/newlogin": (context) => NewLogin(),
     },
   ); //materialApp
 }
