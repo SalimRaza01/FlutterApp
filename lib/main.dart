@@ -9,24 +9,23 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    themeMode: ThemeMode.light,
-    theme: ThemeData(primarySwatch: Colors.blue),
-    darkTheme: ThemeData(
-      brightness: Brightness.dark,
-    ),
-    debugShowCheckedModeBanner: false,
-    // initialRoute: "/home",
-    routes: {
-     "/": (context) => NewLogin(),
-      "/home": (context) => HomeScreen(),
-         "/login": (context) => LoginScreen(),
-           "/register": (context) => RegisterScreen(),
-             "/newlogin": (context) => NewLogin(),
-    },
-  ); //materialApp
-}
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      debugShowCheckedModeBanner: false,
+      // initialRoute: "/home",
+      routes: {
+        "/": (context) => NewLogin(),
+        "/home": (context) => HomeScreen(),
+        "/login": (context) => LoginScreen(),
+        "/register": (context) => RegisterScreen(),
+        "/newlogin": (context) => NewLogin(),
+      },
+    );
+  }
 }

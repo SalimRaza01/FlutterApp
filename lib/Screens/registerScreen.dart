@@ -48,7 +48,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-                    backgroundColor: Colors.black,
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
           // Positioned(
@@ -85,7 +85,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding: const EdgeInsets.all(20),
                     child: TextFormField(
                       controller: TextEditingController(text: user.email),
-                       style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white),
                       onChanged: (value) {
                         user.email = value;
                       },
@@ -130,7 +130,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     padding: const EdgeInsets.all(20),
                     child: TextFormField(
                       controller: TextEditingController(text: user.password),
-                       style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white),
                       onChanged: (value) {
                         user.password = value;
                       },
@@ -173,7 +173,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       width: 200,
                       child: TextButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.green),
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.green),
                           shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100),
