@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Screens/homeScreen.dart';
-import 'Screens/loginScreen.dart';
-import 'Screens/registerScreen.dart';
-import 'Screens/newLogin.dart';
-
+import 'AuthScreens/newLogin.dart';
+import 'AuthScreens/EmailSignup.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -22,13 +20,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: "/home",
       routes: {
-        // ignore: prefer_const_constructors
         "/": (context) => NewLogin(),
-        // ignore: prefer_const_constructors
         "/home": (context) => HomeScreen(),
-        "/login": (context) => LoginScreen(),
-        "/register": (context) => RegisterScreen(),
-        // "/newlogin": (context) => NewLogin(),
+        "/signupwithemail": (context) => EmailSignUp(),
       },
     );
   }
