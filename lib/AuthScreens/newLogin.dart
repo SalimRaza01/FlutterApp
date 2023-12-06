@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'EmailSignup.dart';
+import 'SignUp.dart';
 
 class NewLogin extends StatelessWidget {
   const NewLogin({super.key});
@@ -53,7 +53,7 @@ class NewLogin extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => EmailSignUp()),
+                                    builder: (context) => SignUp()),
                               );
                             },
                             child: Text(

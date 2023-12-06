@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'Screens/homeScreen.dart';
 import 'AuthScreens/newLogin.dart';
-import 'AuthScreens/EmailSignup.dart';
+import 'AuthScreens/SignUp.dart';
+import 'AuthScreens/SignIn.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,9 +22,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: "/home",
       routes: {
-        "/": (context) => NewLogin(),
+        "/": (context) => SignIn(),
+        "/newlogin": (context) => NewLogin(),
         "/home": (context) => HomeScreen(),
-        "/signupwithemail": (context) => EmailSignUp(),
+        "/signup": (context) => SignUp(),
+        // "/signin": (context) => SignIn(),
       },
     );
   }
