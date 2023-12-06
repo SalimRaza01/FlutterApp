@@ -104,7 +104,7 @@ class SignIn extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(250, 20, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(230, 20, 0, 0),
                         child: Row(
                           children: [
                             InkWell(
@@ -121,7 +121,7 @@ class SignIn extends StatelessWidget {
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 0, 59, 108),
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 10),
+                                    fontSize: 14),
                               ),
                             ),
                           ],

@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        // title: const Text("Home"),
       ),
       body: Container(
         padding: const EdgeInsets.only(right: 20, left: 20),
