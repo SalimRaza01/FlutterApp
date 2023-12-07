@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:newproject/AuthScreens/SignUp.dart';
-import 'package:newproject/Screens/homeScreen.dart';
+import 'package:newproject/Screens/HomeScreen.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
