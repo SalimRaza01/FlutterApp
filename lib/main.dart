@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       debugShowCheckedModeBanner: false,
-      // initialRoute: "/home",
+      initialRoute: "/home",
       routes: {
         "/": (context) => SignIn(),
         "/newlogin": (context) => NewLogin(),

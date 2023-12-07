@@ -163,7 +163,7 @@ class SignIn extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              "Don't have an account !",
+                              "Don't have an account ! ",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,

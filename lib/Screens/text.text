@@ -121,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 70,
                                 child: CircularProgressIndicator(
                                   value: 0.5,
-                                  strokeWidth: 14,
+                                  strokeWidth: 16,
                                   color: Color.fromARGB(255, 76, 76, 76),
                                   backgroundColor: Colors.grey,
                                 ),
@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 70,
                                 child: CircularProgressIndicator(
                                   value: 0.5,
-                                  strokeWidth: 14,
+                                  strokeWidth: 16,
                                   color: Color.fromARGB(255, 0, 226, 56),
                                   backgroundColor: Colors.grey,
                                 ),
@@ -145,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                               width: 70,
                               child: CircularProgressIndicator(
                                 value: 0.5,
-                                strokeWidth: 14,
+                                strokeWidth: 16,
                                 color: Color.fromARGB(255, 201, 84, 221),
                                 backgroundColor: Colors.grey,
                               ),
