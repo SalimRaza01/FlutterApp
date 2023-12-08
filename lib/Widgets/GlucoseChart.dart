@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -38,6 +37,103 @@ class GlucoseChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      height: 240,
+      width: 380,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: Colors.grey,
+          width: 0.2,
+        ),
+        color: Colors.white,
+        boxShadow: const [
+          BoxShadow(
+            offset: Offset(5, 15),
+            color: Color.fromARGB(255, 199, 199, 199),
+            blurRadius: 20,
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'GLUCOSE',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'AVERAGE',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'updated 2 hours ago',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  '13 unit/day',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 3),
+            Container(
+              height: 180,
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(
+                  labelRotation: 0,
+                  majorGridLines: MajorGridLines(width: 0),
+                  labelStyle: TextStyle(fontSize: 8),
+                ),
+                primaryYAxis: NumericAxis(
+                  majorGridLines: MajorGridLines(width: 0),
+                  labelStyle: TextStyle(fontSize: 8),
+                ),
+                series: <ChartSeries>[
+                  ColumnSeries<ChartDataInfo, String>(
+                    dataSource: indexChart,
+                    pointColorMapper: (ChartDataInfo data, _) => data.color,
+                    xValueMapper: (ChartDataInfo data, _) => data.year,
+                    yValueMapper: (ChartDataInfo data, _) => data.value,
+                    enableTooltip: true,
+                    dataLabelSettings: DataLabelSettings(
+                      isVisible: false,
+                      angle: 0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
