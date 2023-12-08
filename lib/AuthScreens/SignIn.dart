@@ -51,22 +51,6 @@ class SignIn extends StatelessWidget {
                             ),
                             hintText: 'Enter your email',
                             hintStyle: TextStyle(color: Colors.white),
-                            // enabledBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // errorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
-                            // focusedErrorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
                           ),
                         ),
                       ),
@@ -84,22 +68,6 @@ class SignIn extends StatelessWidget {
                             ),
                             hintText: 'Enter your passowrd',
                             hintStyle: TextStyle(color: Colors.white),
-                            // enabledBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // errorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
-                            // focusedErrorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
                           ),
                         ),
                       ),

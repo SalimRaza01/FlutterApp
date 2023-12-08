@@ -51,22 +51,6 @@ class SignUp extends StatelessWidget {
                             ),
                             hintText: 'Enter your first name',
                             hintStyle: TextStyle(color: Colors.white),
-                            // enabledBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // errorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
-                            // focusedErrorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
                           ),
                         ),
                       ),
@@ -86,22 +70,6 @@ class SignUp extends StatelessWidget {
                             ),
                             hintText: 'Enter your last name',
                             hintStyle: TextStyle(color: Colors.white),
-                            // enabledBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // errorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
-                            // focusedErrorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
                           ),
                         ),
                       ),
@@ -121,22 +89,6 @@ class SignUp extends StatelessWidget {
                             ),
                             hintText: 'Enter your email',
                             hintStyle: TextStyle(color: Colors.white),
-                            // enabledBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // errorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
-                            // focusedErrorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
                           ),
                         ),
                       ),
@@ -154,22 +106,6 @@ class SignUp extends StatelessWidget {
                             ),
                             hintText: 'Enter your passowrd',
                             hintStyle: TextStyle(color: Colors.white),
-                            // enabledBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            // errorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
-                            // focusedErrorBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(16),
-                            //   borderSide: BorderSide(color: Colors.red),
-                            // ),
                           ),
                         ),
                       ),
@@ -189,12 +125,12 @@ class SignUp extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomeScreen(),
-                                  ),
-                                );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomeScreen(),
+                                ),
+                              );
                             },
                             child: Text(
                               "Sign In",
@@ -205,15 +141,15 @@ class SignUp extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                         padding: const EdgeInsets.fromLTRB(80, 20, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(80, 20, 0, 0),
                         child: Row(
                           children: [
                             Text(
                               "Already have an Account ? ",
                               style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                        fontSize: 14),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14),
                             ),
                             InkWell(
                               onTap: () {
@@ -227,9 +163,9 @@ class SignUp extends StatelessWidget {
                               child: Text(
                                 "Sign in",
                                 style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 59, 108),
-                                  fontWeight: FontWeight.bold,
-                               fontSize: 14),
+                                    color: Color.fromARGB(255, 0, 59, 108),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14),
                               ),
                             ),
                           ],

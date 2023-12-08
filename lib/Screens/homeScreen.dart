@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:newproject/Screens/RazorPayIntegration.dart';
 import 'package:newproject/Widgets/PatchWidget.dart';
 import '../Widgets/GlucoseChart.dart';
 import '../Widgets/InsulinkChart.dart';
@@ -154,6 +155,24 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   onTap: () {},
+                ),
+                ListTile(
+                  leading: const Icon(Icons.payment, color: Colors.white),
+                  title: Text(
+                    'PAYMENT',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Home(),
+                      ),
+                    );
+                  },
                 ),
                 ListTile(
                   leading: const Icon(Icons.settings, color: Colors.white),

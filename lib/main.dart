@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'Screens/HomeScreen.dart';
+import 'Screens/RazorPayIntegration.dart';
 import 'AuthScreens/SplashScreen.dart';
 import 'AuthScreens/SignUp.dart';
 import 'AuthScreens/SignIn.dart';
+import 'Screens/HomeScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,13 +21,13 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: "/home",
+      initialRoute: "/",
       routes: {
-        "/": (context) => SignIn(),
+        "/": (context) => HomeScreen(),
+        "/razorpay": (context) => Home(),
         "/newlogin": (context) => NewLogin(),
-        "/home": (context) => HomeScreen(),
         "/signup": (context) => SignUp(),
-        // "/signin": (context) => SignIn(),
+        "signin": (context) => SignIn(),
       },
     );
   }
