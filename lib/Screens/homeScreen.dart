@@ -1,11 +1,13 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:newproject/Widgets/PatchWidget.dart';
 import '../Widgets/GlucoseChart.dart';
 import '../Widgets/InsulinkChart.dart';
 import '../Widgets/TodaysStatus.dart';
 import '../Widgets/Intake.dart';
 import '../Widgets/ResservoirWidget.dart';
+import '../Widgets/BetteryStatus.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -59,12 +61,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 0),
-                      // child: Image.asset(
-                      //   "assets/images/profileImage.png",
-                      //   fit: BoxFit.cover,
-                      //   width: 45,
-                      //   height: 45,
-                      // ),
+                      child: IconButton(
+                        icon: Icon(Icons.more_horiz),
+                        onPressed: () {
+                          // Handle menu icon tap here
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -87,6 +89,14 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: 40),
                 //Ressorvoir_Widget
                 RessorvoirWidget(),
+
+                SizedBox(height: 40),
+                //Bettery_Widget
+                BetteryStatus(),
+
+                SizedBox(height: 40),
+                //Patch_Widget
+                PatchWidget(),
               ],
             ),
           ),
