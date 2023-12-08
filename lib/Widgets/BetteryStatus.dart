@@ -54,9 +54,9 @@ class BetteryStatus extends StatelessWidget {
                       Container(
                         height: 140,
                         width: 50,
-                       child: Image.asset(
-                        "assets/images/BetteryIcon.png",
-                      ),
+                        child: Image.asset(
+                          "assets/images/BetteryIcon.png",
+                        ),
                       ),
                     ],
                   ),

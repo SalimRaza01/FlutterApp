@@ -1,8 +1,8 @@
-// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_new
 
 import 'package:flutter/material.dart';
-import 'package:newproject/Screens/RazorPayIntegration.dart';
-import 'package:newproject/Widgets/PatchWidget.dart';
+import 'RazorPayIntegration.dart';
+import '../Widgets/PatchWidget.dart';
 import '../Widgets/GlucoseChart.dart';
 import '../Widgets/InsulinkChart.dart';
 import '../Widgets/TodaysStatus.dart';
@@ -10,8 +10,16 @@ import '../Widgets/Intake.dart';
 import '../Widgets/ResservoirWidget.dart';
 import '../Widgets/BetteryStatus.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool showBatteryInfo = false;
+  bool showPatchInfo = false;
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +71,12 @@ class HomeScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 0),
                       child: IconButton(
-                        icon: Icon(Icons.more_horiz),
+                        icon: Icon(
+                          Icons.more_horiz,
+                          size: 30,
+                        ),
                         onPressed: () {
-                          // Handle menu icon tap here
+                          showPopupMenu(context);
                         },
                       ),
                     ),
@@ -93,11 +104,11 @@ class HomeScreen extends StatelessWidget {
 
                 SizedBox(height: 40),
                 //Bettery_Widget
-                BetteryStatus(),
-
+                if (showBatteryInfo) BetteryStatus(),
                 SizedBox(height: 40),
                 //Patch_Widget
-                PatchWidget(),
+                if (showPatchInfo) PatchWidget(),
+                SizedBox(height: 40),
               ],
             ),
           ),
@@ -189,5 +200,44 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ));
+  }
+
+  void showPopupMenu(BuildContext context) {
+    showMenu(
+      context: context,
+      position: RelativeRect.fromLTRB(80, 180, 20, 0),
+      items: [
+        PopupMenuItem(
+          child: Text(
+            'Battery Info',
+            style: TextStyle(
+              color: Colors.white,
+              // fontSize: 14,
+            ),
+          ),
+          onTap: () {
+            setState(() {
+              showBatteryInfo = true;
+            });
+          },
+        ),
+        PopupMenuItem(
+          child: Text(
+            'Insulin Patch',
+            style: TextStyle(
+              color: Colors.white,
+              // fontSize: 14,
+            ),
+          ),
+          onTap: () {
+            setState(() {
+              showPatchInfo = true;
+            });
+          },
+        ),
+      ],
+      elevation: 8.0,
+      color: Color.fromARGB(255, 31, 29, 86),
+    );
   }
 }
