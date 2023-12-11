@@ -52,7 +52,7 @@ class _RazorPayIntegrationState extends State<RazorPayIntegration> {
       "amount": num.parse(textEditingController.text) * 100,
       "name": "InsuLink",
       "description": "Payment for some random product",
-      "prefill": {"contact": "9310304983", "email": "salim.creation2017@gmail.com"},
+      "prefill": {"contact": "2222222222", "email": "sssdd@gmail.com"},
       "external": {
         "wallets": ["paytm"]
       }
